@@ -7,11 +7,14 @@ function Bellboy(name, age, salary, languages) {
   this.age = age;
   this.salary = salary;
   this.languages = languages;
+  this.clean=function(){
+    return "Cleaning in progress"
+  }
 }
 
 var bellB1 = new Bellboy('saman', 23, 40000, ['japan', 'eng']);
 
-console.log(bellB1['age']);
+console.log(bellB1.clean());
 
 //===========================================================================
 
