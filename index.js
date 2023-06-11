@@ -2,12 +2,22 @@ for (let i = 0; i < document.querySelectorAll('.drum').length; i++) {
   document.querySelectorAll('.drum')[i].addEventListener('click', function () {
     var key = this.innerHTML;
     playSound(key);
+    buttonAnimation(key);
   });
 }
 
 document.addEventListener('keypress', function (event) {
   playSound(event.key);
+  buttonAnimation(event.key);
 });
+
+function buttonAnimation(key) {
+  var pressedKey = '.' + key;
+  document.querySelector(pressedKey).classList.add('pressed');
+  setTimeout(function () {
+    document.querySelector(pressedKey).classList.remove('pressed');
+  }, 100);
+}
 
 function playSound(key) {
   switch (key) {

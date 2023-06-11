@@ -14,7 +14,7 @@ function Bellboy(name, age, salary, languages) {
 
 var bellB1 = new Bellboy('saman', 23, 40000, ['japan', 'eng']);
 
-console.log(bellB1.clean());
+// console.log(bellB1.clean());
 
 //===========================================================================
 
@@ -39,6 +39,18 @@ function calc(num1, num2, operator) {
   return operator(num1, num2);
 }
 
-console.log(calc(7, 4, devision));
+// console.log(calc(7, 4, devision));
 
 //===========================================================================
+
+
+function anotherAddEventListner(typeofEvent,callback){
+  var eventhappened={
+    eventType:"keypress",
+    key:"p",
+    durationOfKeyPress:2
+  }
+  if(eventhappened.eventType===typeofEvent){
+    callback(eventhappened);
+  }
+}
